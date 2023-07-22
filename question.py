@@ -22,8 +22,10 @@ def extract_questions_from_word(file_path):
 
 def app():
     if 'questions' not in st.session_state or 'answers' not in st.session_state:
-        questions = extract_questions_from_word(r"D:\python\blog\output\output.docx")
-        answers = load_answers(r"D:\python\blog\2019_answer.txt")
+        questions = extract_questions_from_word("output.docx")
+        #questions = extract_questions_from_word(r"D:\python\blog\output\output.docx")
+        answers = load_answers("2019_answer.txt")
+        #answers = load_answers(r"D:\python\blog\2019_answer.txt")
 
         # Shuffle the questions and answers in unison
         combined = list(zip(questions, answers))
